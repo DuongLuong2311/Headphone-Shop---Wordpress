@@ -1,0 +1,301 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+$primary: #022741;
+$white: #fff;
+$zindex-fixed:1030;
+
+@import "./bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+body{
+    overflow-x: hidden;
+}
+
+
+// NAV Bootstrap
+
+.site-header{
+
+    background-color: #fff;
+    z-index: 1000;
+
+
+    .aws-search-field{
+        font-size: 0.9rem;
+        border-radius: 30px ;
+        padding: 0 1.5rem;
+    }
+}
+
+
+/* MAIN MENU */
+
+
+.main-navigation{
+    font-weight: 600;
+
+    .current-menu-item{
+        background-color: #0a619e;
+    }
+
+    a{
+        color: var(--bs-white);
+        padding: 1rem 2.4rem ;
+        transition: 250ms;
+        &:hover{
+            background-color: #0a619e;
+        }
+    }
+
+    .menu-toggle{
+        background-color: $primary;
+        color:#fff;
+        border: 0;
+        width: 10%;
+    }
+}
+
+.btn-Link{
+    position: absolute;
+    top: 61%;
+    z-index: 100;
+    left: 13%;
+    width: 11%;
+    padding: 10px 0;
+    background-color: $white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $primary;
+    border: 0;
+    text-transform: uppercase;
+    transition: 250ms;
+    &:hover{
+        background-color: #0a619e;
+            color: $white;
+    }
+    
+}
+
+#category_box{
+
+
+    .cover-box{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        transition: 250ms;
+
+        #btn-Category{
+            background-color:$white;
+            padding: 10px 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 0;
+
+            &:hover{
+                background-color: #0a619e;
+                color: $white;
+            }
+        }
+    
+        &:hover{
+            opacity: 1;
+            top: 0;
+
+        }
+    }
+   
+
+}
+
+.category-group{
+    background-color: #074B7B;
+    
+    .title-group{
+        h1{
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+.customer_name{
+    color: #022741;
+}
+
+.home-contact-section{
+    background-color: #022741;
+}
+
+
+
+// FOOTER WIDGET
+
+
+.site-footer{
+
+    .menu{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        a{
+            color: $white;
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;   
+            transition: 250ms;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+// SINGLE PRODUCT
+
+ul.products {
+
+    li.product{
+        padding : 20px;
+
+        a.add_to_cart_button{
+            display: block !important;
+            text-align: center;
+            box-shadow: 0 4px 7px rgba($color: #000000, $alpha: 0.7);
+            align-items: flex-end !important;
+
+        }
+
+        .attachment-woocommerce_thumbnail{
+            border-radius:20px;
+            overflow: hidden;
+        }
+    }
+}
+
+
+// LOGIN FORM
+
+.woocommerce-form {
+    width: 20vw;
+
+    .woocommerce-form-row{
+        .woocommerce-Input{
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+    }
+
+    .form-row{
+        .login-btn{
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+}
+
+
+// PAGE TITLE
+h1.entry-title{
+    display: none;
+}
+
+
+
+
+// MY ACCOUNT PAGE
+.woocommerce-MyAccount-navigation{
+    ul{
+        list-style: none; 
+
+        a{
+            text-decoration: none !important;
+            color: $primary;
+            li{
+                width: 100%;
+                padding: 10px;
+                transition: all 0.25s;
+                border: 1px solid $primary;
+                  
+                &:hover{
+                    background-color: #0a619e;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+
+div.summary.entry-summary{
+    margin-bottom: 5px;
+    
+    figure.woocommerce-product-gallery__wrapper{
+        height: 400px;
+        width: 400px;
+        object-fit: cover;
+    }
+
+    form.cart{
+        display: flex;
+        align-items: center;
+    }
+
+    .woocommerce-product-gallery{
+        width: 30%;
+    }
+    
+    
+    .woocommerce-product-rating{
+        margin : 0;
+    }
+    
+    .yith-wcwl-add-button{
+        margin : 0 0 10px 0;
+    
+    }
+
+    .product_meta{
+        display: none;
+    }
+    
+    bdi{
+        font-weight: 700;
+        margin-top: 0;
+    }
+}
+
+
+.woocommerce-privacy-policy-text{
+    color: $white;
+
+    a{
+        color: $white;
+
+    }
+}
+
+.wpcf7-form-control{
+    background-color: $white;
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 5px 15px;
+    border: none;
+
+}
